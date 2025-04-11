@@ -1,0 +1,23 @@
+git remote add origin https://github.com/elpey6611/curso_udemy_bienesraices.git
+
+el mio.git cambiarlo por el nombre del repositorio
+
+
+para evitar advertencias en el git antes de ejecutar el comando siguiente
+usa lo siguiente
+git config --global core.autocrlf true
+
+y luego sigues con el proceso
+
+luego de ello ejecutar el siguiente comando
+git add .
+
+luego utilizar
+git status para ver que todos los archivos esten en color verde
+
+git commit -m "actualizado el 11042025"
+
+luego digitar 
+git push
+muestra un error pero se soluciona con 
+git push --set-upstream origin master

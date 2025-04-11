@@ -1,0 +1,9 @@
+para recuperar un archivo git 
+git log --oneline
+
+y aparecen la lista de todas las commit hechas
+
+para restaurar una se ocupa lo siguiente
+git reset --heard y el numero que aparece en la lista 
+
+entre mas antigua la copia se pierde las que estan despues de la fecha indicada
