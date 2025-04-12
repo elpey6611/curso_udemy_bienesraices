@@ -12,8 +12,12 @@ y luego sigues con el proceso
 luego de ello ejecutar el siguiente comando
 git add .
 
+git branch -m main
+
 luego utilizar
 git status para ver que todos los archivos esten en color verde
+
+git remote add origin https://github.com/elpey6611/curso_udemy_bienesraices.git
 
 git commit -m "actualizado el 11042025"
 

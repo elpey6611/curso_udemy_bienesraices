@@ -1,8 +1,8 @@
 <?php
 require '../incluir/funciones.php';
 include '../plantillas/pub_var.php';
-require '../config/ado_db.php';
-require '../config/dbconexion.php';
+require '../configurar/ado_db.php';
+require '../configurar/dbconexion.php';
 
 $miruta = obtener_path();
 
@@ -157,9 +157,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <a href="<?php echo RUTA_INDEX; ?>" class="boton boton-verde">Volver</a>
 
     <?php foreach ($verrores as $error): ?>
-        <div class="alerta error">
-            <?php echo $error; ?>
-        </div>
+    <div class="alerta error">
+        <?php echo $error; ?>
+    </div>
 
     <?php endforeach; ?>
 
@@ -204,9 +204,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <select value="<?php echo $vvendedor; ?>" name="txtfvendedor">
                 <option value="">--Seleccione--</option>
                 <?php while ($rowv = mysqli_fetch_array($recno_vend)): ?>
-                    <option <?php echo $vvendedor === $rowv['fcod_vend'] ? 'selected' : ''; ?>
-                        value="<?php echo $rowv['fcod_vend']; ?>">
-                        <?php echo $rowv['fnombre_vend'] . " " . $rowv['fapellido_vend']; ?></option>
+                <option <?php echo $vvendedor === $rowv['fcod_vend'] ? 'selected' : ''; ?>
+                    value="<?php echo $rowv['fcod_vend']; ?>">
+                    <?php echo $rowv['fnombre_vend'] . " " . $rowv['fapellido_vend']; ?></option>
                 <?php endwhile; ?>
             </select>
         </fieldset>

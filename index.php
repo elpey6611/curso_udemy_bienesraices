@@ -1,10 +1,10 @@
-<?php 
-    require 'incluir/funciones.php';
-    incluirTemplate('header',RUTA_PLANTILLAS, $inicio = true);
-    incluirTemplate('pub_var',RUTA_PLANTILLAS);      
-    //*$vruta_frm = RUTA_PLANTILLAS;
-    //*incluirTemplate("header",$vruta_frm, $inicio = true);
-    $id=" ";
+<?php
+require 'incluir/funciones.php';
+incluirTemplate('header', RUTA_PLANTILLAS, $inicio = true);
+incluirTemplate('pub_var', RUTA_PLANTILLAS);
+//*$vruta_frm = RUTA_PLANTILLAS;
+//*incluirTemplate("header",$vruta_frm, $inicio = true);
+$id = " ";
 ?>
 
 <main class="contenedor seccion">
@@ -34,19 +34,19 @@
 
 <section class="seccion contenedor">
     <h2>Casas y Depas en Venta</h2>
-    <?php 
-            $limite = 3;
-            include RUTA_PLANTILLAS . '/anuncios.php';
-        ?>
+    <?php
+    $limite = 3;
+    include RUTA_PLANTILLAS . '/anuncios.php';
+    ?>
     <div class="alinear-derecha">
-        <a href="<?php RUTA_PLANTILLAS . '/anuncios.php';?>" class="boton-verde">Ver Todas</a>
+        <a href="<?php RUTA_PLANTILLAS . '/anuncios.php'; ?>" class="boton-verde">Ver Todas</a>
     </div>
 </section>
 
 <section class="imagen-contacto">
     <h2>Encuentra la casa de tus sueños</h2>
     <p>Llena el formulario de contacto y un asesor se pondrá en contacto contigo a la brevedad</p>
-    <a href="<?php RUTA_ROOT . 'contacto.php';?>" class="boton-amarillo">Contactános</a>
+    <a href="<?php RUTA_ROOT . 'contacto.php'; ?>" class="boton-amarillo">Contactános</a>
 </section>
 
 <div class="contenedor seccion seccion-inferior">
@@ -110,8 +110,8 @@
         </div>
     </section>
 </div>
-<?php 
-   incluir_nfrm(legen_footer("index.php en raiz"));
-   incluirTemplate('footer',RUTA_PLANTILLAS);
-    //*incluirTemplate('footer',RUTA_PLANTILLAS, $inicio = true);
+<?php
+incluir_nfrm(legen_footer("index.php en raiz"));
+incluirTemplate('footer', RUTA_PLANTILLAS, $inicio = true);
+//*incluirTemplate('footer',RUTA_PLANTILLAS, $inicio = true);
 ?>

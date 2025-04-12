@@ -1,8 +1,8 @@
 <?php
 require '../incluir/funciones.php';
 include '../plantillas/pub_var.php';
-require '../config/ado_db.php';
-require '../config/dbconexion.php';
+require '../configurar/ado_db.php';
+require '../configurar/dbconexion.php';
 //
 $miruta = obtener_path();
 $latura = RUTA_ROOT . "/new_imagenes/";
@@ -65,21 +65,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </thead>
         <tbody>
             <?php while ($vrow_prop = mysqli_fetch_assoc($rst_prop)): ?>
-                <tr class="det_tr">
-                    <td class="tdcod-prod"><?php echo $vrow_prop['fcod_propiedades']; ?></td>
-                    <td class="tdtitulo"><?php echo $vrow_prop['ftitulo']; ?></td>
-                    <td>
-                        <img src="<?php echo '../new_imagenes/' . trim($vrow_prop['fnombre_imagen']); ?>" class="imagen-tabla tdimg">
-                    </td>
-                    <td class="tdprecio">$ <?php echo $vrow_prop['fprecio']; ?></td>
-                    <td>
-                        <form method="POST" class="w-100">
-                            <input type="hidden" name="txtid" value="<?php echo $vrow_prop['fcod_propiedades']; ?>">
-                            <input type="submit" class="boton-rojo-block" value="Eliminar">
-                        </form>
-                        <a href="../frm/actualizar.php?id=<?php echo $vrow_prop['fcod_propiedades']; ?>" class="boton-azul-block">Actualizar</a>
-                    </td>
-                </tr>
+            <tr class="det_tr">
+                <td class="tdcod-prod"><?php echo $vrow_prop['fcod_propiedades']; ?></td>
+                <td class="tdtitulo"><?php echo $vrow_prop['ftitulo']; ?></td>
+                <td>
+                    <img src="<?php echo '../new_imagenes/' . trim($vrow_prop['fnombre_imagen']); ?>"
+                        class="imagen-tabla tdimg">
+                </td>
+                <td class="tdprecio">$ <?php echo $vrow_prop['fprecio']; ?></td>
+                <td>
+                    <form method="POST" class="w-100">
+                        <input type="hidden" name="txtid" value="<?php echo $vrow_prop['fcod_propiedades']; ?>">
+                        <input type="submit" class="boton-rojo-block" value="Eliminar">
+                    </form>
+                    <a href="../frm/actualizar.php?id=<?php echo $vrow_prop['fcod_propiedades']; ?>"
+                        class="boton-azul-block">Actualizar</a>
+                </td>
+            </tr>
             <?php endwhile; ?>
         </tbody>
     </table>
